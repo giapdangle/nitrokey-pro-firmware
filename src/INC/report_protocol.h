@@ -36,6 +36,7 @@
 #define CMD_USER_AUTHENTICATE 0x0E
 #define CMD_GET_USER_PASSWORD_RETRY_COUNT 0x0F
 #define CMD_USER_AUTHORIZE 0x10
+#define CMD_UNLOCK_USER_PASSOWRD            0x11
 #define CMD_LOCK_DEVICE                   0x12
 #define CMD_CHANGE_USER_PIN 0x14
 #define CMD_CHANGE_ADMIN_PIN 0x15
@@ -75,6 +76,7 @@
 #define CMD_STATUS_AES_CREATE_KEY_FAILED            11
 #define CMD_STATUS_ERROR_CHANGING_USER_PASSWORD     12
 #define CMD_STATUS_ERROR_CHANGING_ADMIN_PASSWORD    13
+#define CMD_STATUS_ERROR_UNBLOCKING_PIN             14
 
 /*
 Output report
@@ -232,6 +234,7 @@ uint8_t cmd_newAesKey(uint8_t* report, uint8_t* output);
 uint8_t cmd_lockDevice(uint8_t* report, uint8_t* output);
 uint8_t cmd_change_user_pin(uint8_t *report, uint8_t *output);
 uint8_t cmd_change_admin_pin(uint8_t *report, uint8_t *output);
+uint8_t cmd_unblock_pin(uint8_t *report, uint8_t *output);
 
 
 //START - OTP Test Routine --------------------------------
